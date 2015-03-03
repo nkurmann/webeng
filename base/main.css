@@ -1,0 +1,54 @@
+.about {
+    
+}
+#header {
+    overflow: auto;
+}
+#title {
+    float: left;
+    background-color: antiquewhite;
+}
+
+#navbox {
+    float: right;
+}
+
+
+
+
+h1 {
+    text-decoration: underline;
+    color: #999999;
+        
+}
+
+
+
+
+#last_project_thumbnail {
+    width: 90%;
+    height:auto;
+    position:relative;
+    margin: 5%;
+}
+
+
+
+#footer {
+    background-color: steelblue;
+    color: whitesmoke;
+    overflow: auto;
+}
+
+#footer>div {
+    float: left;
+    width: 23%;
+    margin: 1%
+}
+
+#about>img {
+    width: 18%;
+}
+
+
+
