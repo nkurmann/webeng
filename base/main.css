@@ -2,23 +2,46 @@
     
 }
 #header {
-    overflow: auto;
+    overflow: hidden;
+    padding: 0px;
+    height: 64px;
+    background-color: #444
 }
 #title {
     float: left;
-    background-color: antiquewhite;
+    width: 30%;
+    background-color: lightgrey;
+    
+    font-size: 14px;
+    line-height: 0.5;
+    
+    height: 100%;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    
 }
 
 #navbox {
+    height: 100%;
     float: right;
+    width: 60%;
+}
+#navbox img {
+    margin: 0;
+    height: 100%;
+    
+    
 }
 
 
 
 
-h1 {
-    text-decoration: underline;
+#title h1 {
+    text-decoration: none;
     color: #999999;
+    font-variant: small-caps;
         
 }
 
@@ -29,15 +52,16 @@ h1 {
     width: 90%;
     height:auto;
     position:relative;
-    margin: 5%;
+    margin: 0px;
 }
 
 
 
 #footer {
-    background-color: steelblue;
+    background-color: teal;
     color: whitesmoke;
     overflow: auto;
+    margin: 10px;
 }
 
 #footer>div {
@@ -52,3 +76,52 @@ h1 {
 
 
 
+
+.portfolio {
+    overflow-y: scroll;
+    background-image: url(images/bg3.png);
+    background-repeat: no-repeat;
+    background-color: black ;
+    margin: 10px;
+    height: 532px ;
+    
+    
+    
+    
+}
+
+.portfolio ul {
+    list-style-type: none;
+}
+
+.portfolio ul li {
+    float: left;
+    width: 190px; 
+    height: 230px;
+    background-color: white;
+    margin: 1%;
+}
+
+.portfolio ul li>div img {
+    width: 100%;
+}
+
+.portfolio>ul>li>div>div {
+    padding: 10px;
+}
+
+
+body {
+    background-color: #444;
+}
+
+#root {
+    max-width: 1000px;
+    background-color: lightgrey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#address img{
+    max-width: 50%;
+}
