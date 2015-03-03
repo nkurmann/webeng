@@ -105,7 +105,7 @@ ul {
     background-repeat: no-repeat;
     background-color: black ;
     margin: 10px;
-    height: 532px 
+    height: 532px ;
     
 }
 
@@ -152,11 +152,12 @@ ul {
 #footer>div {
     float: left;
     width: 23%;
-    margin: 1%
+    margin: 1%;
 }
 
 #about>img {
-    width: 18%;
+    width: 15%;
+    
 }
 
 #address img{
