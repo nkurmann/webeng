@@ -1,6 +1,16 @@
-.about {
-    
+body {
+    background-color: #444;
 }
+
+#root {
+    max-width: 1000px;
+    background-color: lightgrey;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
 #header {
     overflow: hidden;
     padding: 0px;
@@ -28,6 +38,7 @@
     float: right;
     width: 60%;
 }
+
 #navbox img {
     margin: 0;
     height: 100%;
@@ -48,34 +59,10 @@
 
 
 
-#last_project_thumbnail {
-    width: 90%;
-    height:auto;
-    position:relative;
-    margin: 0px;
+
+ul {
+    list-style-type: none;
 }
-
-
-
-#footer {
-    background-color: teal;
-    color: whitesmoke;
-    overflow: auto;
-    margin: 10px;
-}
-
-#footer>div {
-    float: left;
-    width: 23%;
-    margin: 1%
-}
-
-#about>img {
-    width: 18%;
-}
-
-
-
 
 .portfolio {
     overflow-y: scroll;
@@ -84,14 +71,6 @@
     background-color: black ;
     margin: 10px;
     height: 532px ;
-    
-    
-    
-    
-}
-
-.portfolio ul {
-    list-style-type: none;
 }
 
 .portfolio ul li {
@@ -111,17 +90,63 @@
 }
 
 
-body {
-    background-color: #444;
+.blog {
+    overflow-y: scroll;
+    background-image: url(images/bg2.png);
+    background-repeat: no-repeat;
+    background-color: black ;
+    margin: 10px;
+    height: 532px 
+    
 }
 
-#root {
-    max-width: 1000px;
-    background-color: lightgrey;
-    margin-left: auto;
-    margin-right: auto;
+#last_project_thumbnail {
+    width: 90%;
+    height:auto;
+    position:relative;
+    margin: 0px;
+}
+
+
+
+#footer {
+    background-color: teal;
+    color: whitesmoke;
+    overflow: auto;
+    margin: 10px;
+    margin-bottom: 100px;
+    display: block;
+    
+}
+
+#footer>div {
+    float: left;
+    width: 23%;
+    margin: 1%
+}
+
+#about>img {
+    width: 18%;
 }
 
 #address img{
     max-width: 50%;
+}
+
+#index {
+    position: relative;
+    background-image: url(images/bg1.png);
+    height: 532px;
+}
+
+#index>div{
+    position: relative;
+    top: 5%;
+    left: 3%;
+    
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    min-width: 300px;
+    height: 90%;
+    
 }
