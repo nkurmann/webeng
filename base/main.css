@@ -46,7 +46,7 @@ body {
 
 #navbox {
     float: right;
-    width: 60%;
+    min-width: 60%;
     position: absolute;
     left: 40%;
     bottom: -3px;
@@ -173,8 +173,14 @@ ul {
     clear: left;
 }
 
-.contact_info {
-    background-color: rgba(255,255,255,0.3);
+
+#contactform textarea {
+    width: 95%;
+}
+
+#contactform .contact_info {
+    background-color: rgba(255,255,255,0.7);
+    color: black;
 }
 
 #last_project_thumbnail {
@@ -201,7 +207,7 @@ ul {
     margin: 1%;
 }
 
-#about>img {
+#about img {
     width: 15%;
     
 }
@@ -228,7 +234,6 @@ ul {
 
 
 
-#contactform textarea {
-    width: 95%;
-    text-shadow: "message";
+a {
+    color: darkslategrey;
 }
