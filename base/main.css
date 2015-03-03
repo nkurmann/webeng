@@ -28,7 +28,7 @@ body {
     line-height: 0.5;
     
     
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 5px;
     text-align: left;
     position: absolute;
@@ -36,6 +36,13 @@ body {
     height: 100%;
     
 }
+
+#title h1 {
+    text-decoration: none;
+    color: #666666;
+    font-variant: small-caps;    
+}
+
 
 #navbox {
     float: right;
@@ -51,20 +58,6 @@ body {
     min-width: 70px;
     
 }
-
-
-
-
-#title h1 {
-    text-decoration: none;
-    color: #999999;
-    font-variant: small-caps;
-        
-}
-
-
-
-
 
 ul {
     list-style-type: none;
