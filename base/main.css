@@ -166,53 +166,57 @@ ul {
     margin-top: 45px;
     font-size: 250%;
     padding-bottom:120px;
+    float: left;
+    color: white;
 }
 
 
-#contactform>div { 
+.form { 
     float: left;
     color: white;
    
     margin-left: 0px;
     padding-left: 0px;
-    width: 45%;
-    height: 75%;
-}
-
-.form {
+    width: 40%;
     clear: left;
     max-height: 200px;
 }
 
-#first_name_block {
-    display: inline}
-
-#last_name_block {
-    display:inline}
-
-.test {
-    display:inline}
-
 
 #contactform textarea {
-    width: 95%;
+    width: 99%;
 }
 
 #contactform .contact_info {
-    float:right;
+
     background-color: rgba(255,255,255,0.7);
     color: black;
-    max-height: 200px;
+    margin-top:20px;
+    margin-left:5px;
+    overflow:auto;
+    padding: 15px;
+    left:45%;
+    right: 5%;
+    position: absolute;
+    float: right;
+    clear:both;
+    max-height:200px;
+}
+
+
+
+.input_right {
+    width: 50%;
+    float:right;
+
 }
 
 .alignleft {
     float:left;
-    width:50%;
 }
 
 .alignright {
-    width: 50%;
-
+    float:right;;
 }
 
 #last_project_thumbnail {
@@ -259,4 +263,9 @@ ul {
 
 a {
     color: darkslategrey;
+}
+
+.form_details {
+    width: 100%;
+    clear:both;
 }
