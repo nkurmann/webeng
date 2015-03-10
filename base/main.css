@@ -269,3 +269,18 @@ a {
     width: 100%;
     clear:both;
 }
+
+
+@media screen and (min-width:768) and (max-width:1023px) {
+    
+}
+
+
+@media screen and (min-width:480px) and (max-width:767px) {
+    
+}
+
+@media screen and (min-width:0px) and (max-width:479px) {
+    .form{}
+    
+}
