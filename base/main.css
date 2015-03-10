@@ -162,31 +162,36 @@ ul {
 }
 
 #contactform>#title2 {
-    position: float;
-    background-color: transparent;
     height: auto;
-    line-height: 1;
+    margin-top: 45px;
+    font-size: 250%;
+    padding-bottom:120px;
 }
 
-#contactform>#title2 {
-    font-size: 250%;
-    background-color: rgba(0,0,0,0.3);
-}
 
 #contactform>div { 
     float: left;
     color: white;
    
+    margin-left: 0px;
+    padding-left: 0px;
     width: 45%;
     height: 75%;
-    padding: 10px;
-    margin: 10px;
 }
 
 .form {
-    background-color: rgba(0,0,0,0.3);
     clear: left;
+    max-height: 200px;
 }
+
+#first_name_block {
+    display: inline}
+
+#last_name_block {
+    display:inline}
+
+.test {
+    display:inline}
 
 
 #contactform textarea {
@@ -194,8 +199,20 @@ ul {
 }
 
 #contactform .contact_info {
+    float:right;
     background-color: rgba(255,255,255,0.7);
     color: black;
+    max-height: 200px;
+}
+
+.alignleft {
+    float:left;
+    width:50%;
+}
+
+.alignright {
+    width: 50%;
+
 }
 
 #last_project_thumbnail {
