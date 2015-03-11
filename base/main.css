@@ -234,7 +234,7 @@ ul {
 }
 
 .alignright {
-    float:right;;
+    float:right;
 }
 
 #last_project_thumbnail {
@@ -410,7 +410,31 @@ a {
         margin: 1%;
         left:3%;
         right:10%;
-}
+    }
+    
+    #contactform .contact_info {
+
+
+        width:85%;
+        left:10px;
+        right:20px;
+        top:60px;
+        padding:10px;
+ 
+    }
+    
+    .form { 
+
+        position:relative;
+        width: 95%;
+        top:30px;
+
+    }
+    
+    #contactform>#title2 {
+        margin-top:20px;
+    }
+
 }
 
 @media screen and (min-width:0px) and (max-width:479px) {
@@ -492,10 +516,12 @@ a {
     #contactform .contact_info {
 
 
-        width:75%;
-        left:20px;
-        right:20px;
+        width:90%;
+        left:5px;
         top:60px;
+        padding:5px;
+
+
  
     }
     
@@ -510,6 +536,18 @@ a {
         width: 95%;
         top:50px;
 
+    }
+    
+    
+    .alignleft {
+        float:left;
+        clear:left;
+    }
+
+    .alignright {
+        float:left;
+        clear:left;
+        padding-left:10px;
     }
     
 }
