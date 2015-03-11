@@ -55,6 +55,7 @@ body {
 #navbox1 img {
     min-width: 80px;
     max-height:50px;
+    
 
     
 }
@@ -216,8 +217,8 @@ ul {
     right: 5%;
     position: absolute;
     float: right;
-    clear:both;
     max-height:200px;
+    top:250px;
 }
 
 
@@ -278,10 +279,7 @@ a {
     color: darkslategrey;
 }
 
-.form_details {
-    width: 100%;
-    clear:both;
-}
+
 
 
 
@@ -304,9 +302,9 @@ a {
 @media screen and (min-width:768px) and (max-width:1023px) {
     
     #navbox img {
-        min-width: 55px;
-        max-width: 20%;
-        max-height:50px;
+
+
+        max-height:40px;
     }
     
     #footer>div {
@@ -318,6 +316,17 @@ a {
     #index>div {
         max-width:45%;
     }
+    
+    .blog ul li {
+        position: relative;
+        float: left;
+        width: 90%;
+        height: 150px;
+        margin: 1%;
+        background-color: white;
+        opacity: 0.8;
+    }
+    
     
 
 }
@@ -382,6 +391,26 @@ a {
         max-width:90%;
     }
     
+    .blog ul li {
+        position: relative;
+        float: left;
+        width: 90%;
+        height: auto;
+        margin: 1%;
+        background-color: white;
+        opacity: 0.8;
+    }
+    
+    .portfolio ul li {
+        position: relative;
+        float: left;
+        width: 40%;; 
+        height: 250px;
+        background-color: white;
+        margin: 1%;
+        left:3%;
+        right:10%;
+}
 }
 
 @media screen and (min-width:0px) and (max-width:479px) {
@@ -441,5 +470,46 @@ a {
         max-width:90%;
     }
     
+    .blog ul li {
+        position: relative;
+        float: left;
+        width: 90%;
+        height:auto;
+        margin: 1%;
+        background-color: white;
+        opacity: 0.8;
+        margin-bottom: 5px;
+    }
+
+    .portfolio ul li {
+        left:3%;
+        right:10%;
+        width:80%;
+        height:auto;
+        margin-bottom:5px;
+    }
+    
+    #contactform .contact_info {
+
+
+        width:75%;
+        left:20px;
+        right:20px;
+        top:60px;
+ 
+    }
+    
+    #contactform>#title2 {
+        margin-top:20px;
+    }
+
+
+    .form { 
+
+        position:relative;
+        width: 95%;
+        top:50px;
+
+    }
     
 }
