@@ -140,10 +140,13 @@ footer article {
     padding-left:10px;
     padding-right:10px;
     padding-top:10px;
+    padding-bottom: 10px;
 }
 
 
-.blog {
+
+
+#blog {
     overflow-y: auto;
     background-image: url(images/bg2.png);
     background-position: center;
@@ -151,28 +154,31 @@ footer article {
     background-color: black ;
     margin: 10px;
     height: 515px;
-    padding: 10px;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-flow:wrap;
+    padding:10px;
     
 }
 
-
-.blog ul li {
-    position: relative;
-    float: left;
+#blog article {
     width: 45%; 
-    height: 200px;
-    margin: 1%;
+    height: 190px;
     background-color: white;
     opacity: 0.8;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
 }
 
-.blog ul li>div img {
+#blog article>div>img {
     width: 25%;
     float: left;
     margin-right: 10px;
 }
 
-.blog>ul>li>div>div {
+#blog article>div {
     padding: 10px;
 }
 
@@ -185,11 +191,11 @@ footer article {
     padding:10px;
 }
 
-#index>div{
+#index article{
     position: relative;
     top: 2%;
     left: 2%;
-    
+    width: 40%;
     color: white;
     background-color: rgba(0,0,0,0.3);
     height: 90%;
@@ -298,21 +304,6 @@ footer article {
     }
     
 
-    
-    #index>div {
-        max-width:45%;
-    }
-    
-    .blog ul li {
-        position: relative;
-        float: left;
-        width: 90%;
-        height: 150px;
-        margin: 1%;
-        background-color: white;
-        opacity: 0.8;
-    }
-
 }
 
 
@@ -346,20 +337,18 @@ footer article {
     }
 
     
-    #index>div {
-        max-width:90%;
+    #index article{
+        width:70%;
     }
     
-    .blog ul li {
-        position: relative;
-        float: left;
-        width: 90%;
-        height: auto;
-        margin: 1%;
-        background-color: white;
-        opacity: 0.8;
+    
+    
+    #blog article {
+        width: 80%;
+        height:auto;
+        margin-botttom:5%;
+        min-height: 150px;
     }
-
     
     #portfolio article {
         width: 45%;
@@ -416,20 +405,17 @@ footer article {
     }
     
     
-    #index>div {
-        max-width:90%;
+    #index article{
+        width:90%;
     }
     
-    .blog ul li {
-        position: relative;
-        float: left;
-        width: 90%;
+    #blog article {
+        width: 80%;
         height:auto;
-        margin: 1%;
-        background-color: white;
-        opacity: 0.8;
-        margin-bottom: 5px;
+        margin-top:5%;
+        margin-botttom:5%;
     }
+    
 
     
     #portfolio article {
