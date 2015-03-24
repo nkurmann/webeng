@@ -1,3 +1,7 @@
+a {
+    color: darkslategrey;
+}
+
 body {
     background-color: #444;
 }
@@ -13,10 +17,10 @@ body {
 }
 
 
-#header {
+header {
     background-color: #444;
     position: relative;
-    height: 60px;
+    height:60px;
 }
 
 #title { 
@@ -44,15 +48,60 @@ body {
 }
 
 
-#navbox {
+nav {
     position:absolute;
-    left: 35%;
+    left: 40%;
     bottom: -3px;
     width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right:auto;
+    flex-wrap: wrap;
 
 }
 
-#navbox1 img {
+nav img {
+    margin-left:3px;
+}
+
+
+
+footer {
+    background-color: teal;
+    color: whitesmoke;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer article {
+    width:20%;
+    padding: 10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+#about img {
+    width: 15%;
+    
+}
+
+#address img{
+    max-width: 50%;
+}
+
+#last_project_thumbnail {
+    width: 90%;
+    height:auto;
+    position:relative;
+}
+
+
+<!--#navbox1 img {
     min-width: 80px;
     max-height:50px;
     
@@ -77,7 +126,7 @@ body {
 #navbox2 {
     float:left;
 
-}
+}-->
 
 ul {
     list-style-type: none;
@@ -237,47 +286,7 @@ ul {
     float:right;
 }
 
-#last_project_thumbnail {
-    width: 90%;
-    height:auto;
-    position:relative;
-    margin: 0px;
-}
 
-
-
-#footer {
-    background-color: teal;
-    color: whitesmoke;
-    overflow: auto;
-    margin: 10px;
-
-    
-}
-
-
-
-#about img {
-    width: 15%;
-    
-}
-
-#address img{
-    max-width: 50%;
-}
-
-
-
-
-
-
-
-
-
-
-a {
-    color: darkslategrey;
-}
 
 
 
@@ -285,7 +294,9 @@ a {
 /* RESPONSIVE PART */
 
 
-@media screen and (min-width:1024px) {
+
+
+<!--@media screen and (min-width:1024px) {
     #footer>div {
         float: left;
         width: 23%;
@@ -296,15 +307,17 @@ a {
         max-width:35%;
     }
     
-}
+}-->
 
 
 @media screen and (min-width:768px) and (max-width:1023px) {
     
-    #navbox img {
-
-
-        max-height:40px;
+    header {
+        height:50px;
+    }
+    
+    nav img {
+        height:50px;
     }
     
     #footer>div {
@@ -326,27 +339,26 @@ a {
         background-color: white;
         opacity: 0.8;
     }
-    
-    
 
 }
 
 
 @media screen and (min-width:480px) and (max-width:767px) {
+    
+    header {
+        height:40px;
+    }
+    
+    nav img {
+        height:40px;
+    }
+    
     #title {
         font-size:0.7em;
         margin-top:20px;
     }
 
-    
-    #navbox {
-        left:40%;
-    }
-    
-    #navbox img {
-        min-width: 55px;
-        max-width: 30%;
-    }
+
     
     #address {
         float: left;
