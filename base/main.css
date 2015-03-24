@@ -2,6 +2,10 @@ a {
     color: darkslategrey;
 }
 
+ul {
+    list-style-type: none;
+}
+
 body {
     background-color: #444;
 }
@@ -52,7 +56,7 @@ nav {
     position:absolute;
     left: 40%;
     bottom: -3px;
-    width: 55%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -78,7 +82,7 @@ footer {
 
 footer article {
     width:20%;
-    padding: 10px;
+    padding: 2%;
     margin-left:auto;
     margin-right:auto;
 }
@@ -101,65 +105,41 @@ footer article {
 }
 
 
-<!--#navbox1 img {
-    min-width: 80px;
-    max-height:50px;
-    
-
-    
-}
-
-#navbox2 img {
-    min-width: 80px;
-    max-height:50px;
-
-    
-}
-
-#navbox1 {
-    float:left;
-    margin-right: 5px;
-
-
-}
-
-#navbox2 {
-    float:left;
-
-}-->
-
-ul {
-    list-style-type: none;
-}
-
-.portfolio {
+#portfolio {
     overflow-y: auto;
     background-image: url(images/bg3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-color: black ;
     margin: 10px;
-    padding:10px;
     height: 515px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
     
 }
 
 
-.portfolio ul li {
-    position: relative;
-    float: left;
-    width: 190px; 
-    height: 230px;
+#portfolio article {
+    display: flex;
+    float:left;
+    height: 230px; 
+    
+    width: 20%;
     background-color: white;
     margin: 1%;
 }
 
-.portfolio ul li>div img {
+#portfolio article>div>img {
     width: 100%;
+    
 }
 
-.portfolio>ul>li>div>div {
-    padding: 10px;
+#portfolio>article div:nth-child(2) {
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
 }
 
 
@@ -289,25 +269,17 @@ ul {
 
 
 
+/* ************************************************ */
+/* ************************************************ */
 
 
-/* RESPONSIVE PART */
+            /* RESPONSIVE PART */
+
+/* ************************************************ */
+/* ************************************************ */
 
 
 
-
-<!--@media screen and (min-width:1024px) {
-    #footer>div {
-        float: left;
-        width: 23%;
-        margin: 1%;
-    }
-    
-    #index>div {
-        max-width:35%;
-    }
-    
-}-->
 
 
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -316,15 +288,16 @@ ul {
         height:50px;
     }
     
+    nav {
+        left: 33%;
+        width:67%;
+    }
+    
     nav img {
         height:50px;
     }
     
-    #footer>div {
-        float: left;
-        width: 23%;
-        margin: 1%;
-    }
+
     
     #index>div {
         max-width:45%;
@@ -343,61 +316,35 @@ ul {
 }
 
 
-@media screen and (min-width:480px) and (max-width:767px) {
+@media screen and (min-width:501px) and (max-width:767px) {
+    
     
     header {
-        height:40px;
+        height:50px;
+    }
+    
+    nav {
+        left: 25%;
+        width:75%;
     }
     
     nav img {
         height:40px;
     }
     
+    
     #title {
         font-size:0.7em;
-        margin-top:20px;
+        width: 23%;
+
     }
 
-
     
-    #address {
-        float: left;
-        width:45%;
-        height: 280px;
-        margin: 10px;
-    }
-    
-    #about {
-        float: right;
-        width: 45%;
-        height: 280px;
-        margin: 10px;
-    }
-    
-    #last_post {
-        float: left;
-        width:45%;
-        margin: 10px;
-    }
-    
-    #last_project {
-        float:right;
-        width:45%;
-        margin: 10px;
-    }
-    
-    #about img {
-        width: 10%;
-    
+    footer article {
+        width: 40%;
+        padding: 2%;
     }
 
-    #address img{
-        max-width: 30%;
-    }
-    
-    #last_project img {
-        width:50%;
-    }
     
     #index>div {
         max-width:90%;
@@ -412,16 +359,11 @@ ul {
         background-color: white;
         opacity: 0.8;
     }
+
     
-    .portfolio ul li {
-        position: relative;
-        float: left;
-        width: 40%;; 
-        height: 250px;
-        background-color: white;
-        margin: 1%;
-        left:3%;
-        right:10%;
+    #portfolio article {
+        width: 45%;
+        height:300px;
     }
     
     #contactform .contact_info {
@@ -449,58 +391,30 @@ ul {
 
 }
 
-@media screen and (min-width:0px) and (max-width:479px) {
+@media screen and (min-width:0px) and (max-width:500px) {
     #title {
             font-size:0.6em;
             margin-top:20px;
     }
-    #navbox img {
-        min-width: 55px;
-        max-width: 20%;
+    
+    nav {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        column-count: 2;
     }
     
-    #navbox {
-        left:40%;
+    nav img {
+        height: 28px;
     }
     
-    #address {
-        float: left;
-        width:80%;
-
-        margin: 10%;
-    }
     
-    #about {
-        float: left;
+    footer article {
         width: 80%;
-
-        margin: 10%;
+        padding: 2%;
+        margin-bottom:3%;
     }
     
-    #last_post {
-        float: left;
-        width:80%;
-        margin: 10%;
-    }
-    
-    #last_project {
-        float:left;
-        width:80%;
-        margin: 10%;
-    }
-    
-    #about img {
-        width: 15%;
-    
-    }
-
-    #address img{
-        max-width: 40%;
-    }
-    
-    #last_project img {
-        width:50%;
-    }
     
     #index>div {
         max-width:90%;
@@ -517,12 +431,11 @@ ul {
         margin-bottom: 5px;
     }
 
-    .portfolio ul li {
-        left:3%;
-        right:10%;
-        width:80%;
-        height:auto;
-        margin-bottom:5px;
+    
+    #portfolio article {
+        width: 80%;
+        height: auto;
+        padding-bottom:10px;
     }
     
     #contactform .contact_info {
