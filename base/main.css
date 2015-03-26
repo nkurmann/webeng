@@ -475,9 +475,9 @@ footer article {
     left: 100px;
     top: 10px;
     z-index: 1;
-    border-radius: 40px;
-    padding: 40px;
-    background-color: hotpink;
+    border-radius: 38px;
+    padding: 25px;
+    background-color: grey;
     box-shadow: 29px 10px 5px 0px rgba(0,0,0,0.75);
     border-color: black;
     border: 1px solid black;
@@ -492,6 +492,13 @@ footer article {
     width: 80px;
     height: 80px;
     overflow: hidden; 
+}
+
+#menu #more {
+    width: 50px;
+    height:50px;
+    left:8px;
+    top:8px;
 }
 
 /*
