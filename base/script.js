@@ -45,12 +45,13 @@ $(document).ready(function () {
     
     var toggleMenu = function() {
         $('#menu>div>a').toggle();
+        $('#sticky').toggle();
     }
     $("#menu>img").click( toggleMenu );
     
     
     
-    
+    $('#sticky').click(function(){this.toggleClass("active")});
     
     var menu = $("#menu");
     
@@ -59,65 +60,70 @@ $(document).ready(function () {
     
     var iid
     function moveToBorder () {
-        countdown = 0;
-        var X = parseInt(menu.css("left"));
-        var Y = parseInt(menu.css("top"));
-        var size = 300;
-        var height = window.screen.availHeight;
-        var width = window.screen.availWidth;
-        
-        // DECIDE ON DIRECTION
-        if (X <= Math.min(width-X-size, Math.min(Y, height-Y-size))) {
-            // go left
-            alert("going left");
-            iid = setInterval( function () {
-                if (countdown == 0 && parseInt(menu.css("left"))>0) {
-                    X = parseInt(menu.css("left")); 
-                    menu.css("left", (X-1) +"px");
-                }
-                else {
-                    clearInterval(iid);
-                }
-            }, 20);  
+        if(!$('#sticky').hasClass("active")) {
+            countdown = 0;
+            var X = parseInt(menu.css("left"));
+            var Y = parseInt(menu.css("top"));
+            var size = 300;
+            var height = window.screen.availHeight;
+            var width = window.screen.availWidth;
+
+            // DECIDE ON DIRECTION
+            if (X <= Math.min(width-X-size, Math.min(Y, height-Y-size))) {
+                // go left
+                alert("going left");
+                iid = setInterval( function () {
+                    if (countdown == 0 && parseInt(menu.css("left"))>0) {
+                        X = parseInt(menu.css("left")); 
+                        menu.css("left", (X-1) +"px");
+                    }
+                    else {
+                        clearInterval(iid);
+                    }
+                }, 20);  
+            }
+            else if (width-X-size <= Math.min(X, Math.min(Y, height-Y-size))) {
+                // go right
+                alert("going right");
+                iid = setInterval( function () {
+                    if (countdown == 0 && width-parseInt(menu.css("left"))-size>0) {
+                        X = parseInt(menu.css("left")); 
+                        menu.css("left", (X+1) +"px");
+                    }
+                    else {
+                        clearInterval(iid);
+                    }
+                }, 20);  
+            }
+            else if (Y < Math.min(height-Y-size, Math.min(X, width-X-size))) {
+                // go up
+                alert("going up");
+                iid = setInterval( function () {
+                    if (countdown == 0 && parseInt(menu.css("up"))>0) {
+                        Y = parseInt(menu.css("up")); 
+                        menu.css("up", (Y-1) +"px");
+                    }
+                    else {
+                        clearInterval(iid);
+                    }
+                }, 20);  
+            }
+            else if (width-Y-size < Math.min(Y, Math.min(X, width-X-size))) {
+                // go down
+                alert("going down");
+                iid = setInterval( function () {
+                    if (countdown == 0 && height-parseInt(menu.css("up"))-size>0) {
+                        Y = parseInt(menu.css("up")); 
+                        menu.css("up", (Y+1) +"px");
+                    }
+                    else {
+                        clearInterval(iid);
+                    }
+                }, 20);  
+            }
         }
-        else if (width-X-size <= Math.min(X, Math.min(Y, height-Y-size))) {
-            // go right
-            alert("going right");
-            iid = setInterval( function () {
-                if (countdown == 0 && width-parseInt(menu.css("left"))-size>0) {
-                    X = parseInt(menu.css("left")); 
-                    menu.css("left", (X+1) +"px");
-                }
-                else {
-                    clearInterval(iid);
-                }
-            }, 20);  
-        }
-        else if (Y < Math.min(height-Y-size, Math.min(X, width-X-size))) {
-            // go up
-            alert("going up");
-            iid = setInterval( function () {
-                if (countdown == 0 && parseInt(menu.css("up"))>0) {
-                    Y = parseInt(menu.css("up")); 
-                    menu.css("up", (Y-1) +"px");
-                }
-                else {
-                    clearInterval(iid);
-                }
-            }, 20);  
-        }
-        else if (width-Y-size < Math.min(Y, Math.min(X, width-X-size))) {
-            // go down
-            alert("going down");
-            iid = setInterval( function () {
-                if (countdown == 0 && height-parseInt(menu.css("up"))-size>0) {
-                    Y = parseInt(menu.css("up")); 
-                    menu.css("up", (Y+1) +"px");
-                }
-                else {
-                    clearInterval(iid);
-                }
-            }, 20);  
+        else {
+            alert("I'm staying here");
         }
                   
     }
