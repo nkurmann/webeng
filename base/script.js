@@ -22,7 +22,7 @@ $(document).ready(function () {
                 element.css('top', newY);
 
                 element.data('mouseX', event.clientX);
-                element.data('mouseY', event.clientY);                                       
+                element.data('mouseY', event.clientY);
             }
         }
 
@@ -40,9 +40,14 @@ $(document).ready(function () {
         element.mousemove(move);           
     }
     
-    makeDraggable($('#menu'));
+    makeDraggable($("#menu"));
     
     
+    var toggleMenu = function() {
+        $('#menu>div>a').toggle();
+    }
+    
+    $("#menu>img").click( toggleMenu );
     
     
     
