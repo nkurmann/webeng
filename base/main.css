@@ -491,7 +491,29 @@ footer article {
 #menu a img{
     width: 80px;
     height: 80px;
-    overflow: hidden;    
+    overflow: hidden; 
+}
+
+/*
+@keyframes wiggle {
+    0%{transform:rotate(3deg);}
+    50%{transform:rotate(-3deg);}
+    100%{transform:rotate(3deg);}
+}
+*/
+@keyframes wiggle {
+    from {transform: rotateZ(2deg);}
+    50% {transform: rotateZ(-2deg);}
+    to {transform: rotateZ(2deg);}
+}
+
+@-webkit-keyframes wiggle {
+    from {-webkit-transform: rotateZ(2deg);}
+    50% {-webkit-transform: rotateZ(-2deg);}
+    to {-webkit-transform: rotateZ(2deg);}
+}
+#menu a img:hover{
+    -webkit-animation: wiggle 0.1s infinite;
 }
 
 #more {
@@ -505,3 +527,19 @@ footer article {
     margin:-10px;
     
 }
+
+.fade {
+   opacity: 0.5;
+   transition: opacity .25s ease-in-out;
+    /*
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+    */
+}
+
+.fade:hover {
+  opacity: 1;
+}
+
+
+    
