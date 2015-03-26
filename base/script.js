@@ -46,17 +46,21 @@ $(document).ready(function () {
     var toggleMenu = function() {
         $('#menu>div>a').toggle();
         $('#sticky').toggle();
+        
     }
     $("#menu>img").click( toggleMenu );
     
     
     
-    $('#sticky').click(function(){this.toggleClass("active")});
+    $('#sticky').click(function(){
+        $('#sticky').toggleClass("active");
+        //alert("setting sticky to "+$('#sticky').hasClass('active'));
+    });
     
     var menu = $("#menu");
     
     
-    var countdown = 2000;
+    var countdown = 1000;
     
     var iid
     function moveToBorder () {
@@ -64,16 +68,16 @@ $(document).ready(function () {
             countdown = 0;
             var X = parseInt(menu.css("left"));
             var Y = parseInt(menu.css("top"));
-            var size = 300;
-            var height = window.screen.availHeight;
-            var width = window.screen.availWidth;
+            var size = 220;
+            var height = window.innerHeight;
+            var width = window.innerWidth;
+            //alert("height: "+height+"\nwidth: "+width); 
 
             // DECIDE ON DIRECTION
             if (X <= Math.min(width-X-size, Math.min(Y, height-Y-size))) {
                 // go left
-                alert("going left");
                 iid = setInterval( function () {
-                    if (countdown == 0 && parseInt(menu.css("left"))>0) {
+                    if (countdown == 0 && X>0) {
                         X = parseInt(menu.css("left")); 
                         menu.css("left", (X-1) +"px");
                     }
@@ -84,9 +88,9 @@ $(document).ready(function () {
             }
             else if (width-X-size <= Math.min(X, Math.min(Y, height-Y-size))) {
                 // go right
-                alert("going right");
+                
                 iid = setInterval( function () {
-                    if (countdown == 0 && width-parseInt(menu.css("left"))-size>0) {
+                    if (countdown == 0 && width-X-size>0) {
                         X = parseInt(menu.css("left")); 
                         menu.css("left", (X+1) +"px");
                     }
@@ -97,11 +101,11 @@ $(document).ready(function () {
             }
             else if (Y < Math.min(height-Y-size, Math.min(X, width-X-size))) {
                 // go up
-                alert("going up");
+                
                 iid = setInterval( function () {
-                    if (countdown == 0 && parseInt(menu.css("up"))>0) {
-                        Y = parseInt(menu.css("up")); 
-                        menu.css("up", (Y-1) +"px");
+                    if (countdown == 0 && Y>0) {
+                        Y = parseInt(menu.css("top")); 
+                        menu.css("top", (Y-1) +"px");
                     }
                     else {
                         clearInterval(iid);
@@ -110,11 +114,11 @@ $(document).ready(function () {
             }
             else if (width-Y-size < Math.min(Y, Math.min(X, width-X-size))) {
                 // go down
-                alert("going down");
+                
                 iid = setInterval( function () {
-                    if (countdown == 0 && height-parseInt(menu.css("up"))-size>0) {
-                        Y = parseInt(menu.css("up")); 
-                        menu.css("up", (Y+1) +"px");
+                    if (countdown == 0 && height-Y-size>0) {
+                        Y = parseInt(menu.css("top")); 
+                        menu.css("top", (Y+1) +"px");
                     }
                     else {
                         clearInterval(iid);
@@ -123,7 +127,7 @@ $(document).ready(function () {
             }
         }
         else {
-            alert("I'm staying here");
+            //alert("I'm staying here");
         }
                   
     }
@@ -132,7 +136,7 @@ $(document).ready(function () {
     var tid;
     $("#menu").mouseenter( function () {
         //alert("entered!");
-        countdown = 2000;
+        countdown = 1000;
         clearTimeout(tid);
         clearInterval(iid);
     });
@@ -140,7 +144,7 @@ $(document).ready(function () {
       
     $("#menu").mouseleave( function () {
         //alert("left!");
-        tid = setTimeout(moveToBorder, 2000);
+        tid = setTimeout(moveToBorder, 1000);
     });
     
     

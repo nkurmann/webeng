@@ -475,12 +475,14 @@ footer article {
     left: 100px;
     top: 10px;
     z-index: 1;
-    border-radius: 38px;
+    border-radius: 30px;
     padding: 25px;
     background-color: grey;
     box-shadow: 29px 10px 5px 0px rgba(0,0,0,0.75);
     border-color: black;
     border: 1px solid black;
+    min-width:6px;
+    min-height:6px;
     
 }
 
@@ -495,12 +497,22 @@ footer article {
 }
 
 #menu #more {
-    width: 50px;
-    height:50px;
-    left:8px;
-    top:8px;
+    width: 40px;
+    height:40px;
+    left:18px;
+    top:18px;
 }
 
+#sticky {
+    position:absolute;
+    left:50px;
+    top:-3px;
+    
+}
+#sticky img{
+    width:25px;
+    height:25px;
+}
 /*
 @keyframes wiggle {
     0%{transform:rotate(3deg);}
@@ -533,6 +545,14 @@ footer article {
     padding: -10px;
     margin:-10px;
     
+}
+
+#menu .active {
+    
+    background-image: url(images/Materials2.2/sticky_icon_on.png);
+}
+#menu .active>img {
+    display:none;
 }
 
 .fade {
