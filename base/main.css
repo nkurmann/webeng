@@ -501,6 +501,18 @@ footer article {
     top:8px;
 }
 
+#menu #sticky {
+    position:absolute;
+    left:50px;
+    top:-3px;
+    
+}
+
+#menu #sticky img{
+    width:25px;
+    height:25px;
+}
+
 /*
 @keyframes wiggle {
     0%{transform:rotate(3deg);}
