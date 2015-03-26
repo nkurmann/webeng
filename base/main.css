@@ -551,7 +551,7 @@ footer article {
     
     background-image: url(images/Materials2.2/sticky_icon_on.png);
 }
-#menu .active>img {
+#menu .active img {
     display:none;
 }
 
