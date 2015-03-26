@@ -488,6 +488,12 @@ footer article {
     margin-bottom: -4px;
 }
 
+#menu a img{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;    
+}
+
 #more {
     position: absolute;
     top: 20px;

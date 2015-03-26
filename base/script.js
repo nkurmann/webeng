@@ -46,8 +46,52 @@ $(document).ready(function () {
     var toggleMenu = function() {
         $('#menu>div>a').toggle();
     }
-    
     $("#menu>img").click( toggleMenu );
+    
+    
+    
+    
+    
+    var menu = $("#menu");
+    
+    
+    var countdown = 2000;
+    
+    var iid
+    function moveToBorder () {
+       
+        countdown = 0;
+        var X = parseInt(menu.css("left"));
+        
+        iid = setInterval( function () {
+            if (countdown == 0 && parseInt(menu.css("left"))>0) {
+                X = parseInt(menu.css("left")); 
+                menu.css("left", (X-1) +"px");
+            }
+            else {
+                clearInterval(iid)
+            }
+        }, 20);    
+    }
+    
+    
+    var tid;
+    $("#menu").mouseenter( function () {
+        //alert("entered!");
+        countdown = 2000;
+        clearTimeout(tid);
+        clearInterval(iid);
+    });
+        
+      
+    $("#menu").mouseleave( function () {
+        //alert("left!");
+        tid = setTimeout(moveToBorder, 2000);
+    });
+    
+    
+    
+    
     
     
     
