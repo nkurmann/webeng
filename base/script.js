@@ -1,4 +1,20 @@
 /*jQuery*/
+function onResize () {
+    if (window.innerHeight < 500 || window.innerWidth < 500) {
+        if ($('#menu>div>a').is(':visible')) {
+            $('#menu>div>a').hide();
+            $('#sticky').hide();
+        }
+    }
+    else {
+        if ($('#menu>div>a').is(':hidden')) {
+            $('#menu>div>a').show();
+            $('#sticky').show();
+        }
+    }
+            
+}
+
 
 $(document).ready(function () {
     /*
@@ -69,6 +85,8 @@ $(document).ready(function () {
             var X = parseInt(menu.css("left"));
             var Y = parseInt(menu.css("top"));
             var size = 220;
+            if($('#menu>div>a').is(':hidden')) 
+                size = 60;
             var height = window.innerHeight;
             var width = window.innerWidth;
             //alert("height: "+height+"\nwidth: "+width); 
